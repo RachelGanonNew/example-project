@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Building_ManangementEntities">
+    <EntitySetMapping Name="budget">
+      <EntityTypeMapping TypeName="Model.budget">
+        <MappingFragment StoreEntitySet="budget">
+          <ScalarProperty Name="id_action" ColumnName="id_action" />
+          <ScalarProperty Name="kind_of_action" ColumnName="kind_of_action" />
+          <ScalarProperty Name="action_desription" ColumnName="action_desription" />
+          <ScalarProperty Name="action_date" ColumnName="action_date" />
+          <ScalarProperty Name="action_sum" ColumnName="action_sum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Building">
+      <EntityTypeMapping TypeName="Model.Building">
+        <MappingFragment StoreEntitySet="Building">
+          <ScalarProperty Name="id_building" ColumnName="id_building" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="street_num" ColumnName="street_num" />
+          <ScalarProperty Name="foors_num" ColumnName="foors_num" />
+          <ScalarProperty Name="apartment_num" ColumnName="apartment_num" />
+          <ScalarProperty Name="tenants" ColumnName="tenants" />
+          <ScalarProperty Name="id_residentManager" ColumnName="id_residentManager" />
+          <ScalarProperty Name="month_cost" ColumnName="month_cost" />
+          <ScalarProperty Name="cash_box" ColumnName="cash_box" />
+          <ScalarProperty Name="professonal" ColumnName="professonal" />
+          <ScalarProperty Name="valentear_category" ColumnName="valentear_category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="Model.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="id_category" ColumnName="id_category" />
+          <ScalarProperty Name="category_description" ColumnName="category_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comment">
+      <EntityTypeMapping TypeName="Model.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+          <ScalarProperty Name="id_meeting" ColumnName="id_meeting" />
+          <ScalarProperty Name="id_resident" ColumnName="id_resident" />
+          <ScalarProperty Name="comment_description" ColumnName="comment_description" />
+          <ScalarProperty Name="comment_date" ColumnName="comment_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Common_Space">
+      <EntityTypeMapping TypeName="Model.Common_Space">
+        <MappingFragment StoreEntitySet="Common Space">
+          <ScalarProperty Name="id_common_space" ColumnName="id_common_space" />
+          <ScalarProperty Name="id_building" ColumnName="id_building" />
+          <ScalarProperty Name="activity_days" ColumnName="activity_days" />
+          <ScalarProperty Name="activity_hours" ColumnName="activity_hours" />
+          <ScalarProperty Name="schedule" ColumnName="schedule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meeting">
+      <EntityTypeMapping TypeName="Model.Meeting">
+        <MappingFragment StoreEntitySet="Meeting">
+          <ScalarProperty Name="id_meeting" ColumnName="id_meeting" />
+          <ScalarProperty Name="meeting_subject" ColumnName="meeting_subject" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="meeting_description" ColumnName="meeting_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment">
+      <EntityTypeMapping TypeName="Model.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="id_payment" ColumnName="id_payment" />
+          <ScalarProperty Name="id_resident" ColumnName="id_resident" />
+          <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+          <ScalarProperty Name="payment_month" ColumnName="payment_month" />
+          <ScalarProperty Name="done" ColumnName="done" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request">
+      <EntityTypeMapping TypeName="Model.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="id_request" ColumnName="id_request" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="tz" ColumnName="tz" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="street_num" ColumnName="street_num" />
+          <ScalarProperty Name="apartment_num" ColumnName="apartment_num" />
+          <ScalarProperty Name="floor_num" ColumnName="floor_num" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resident">
+      <EntityTypeMapping TypeName="Model.Resident">
+        <MappingFragment StoreEntitySet="Resident">
+          <ScalarProperty Name="id_resident" ColumnName="id_resident" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="tz" ColumnName="tz" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id_building" ColumnName="id_building" />
+          <ScalarProperty Name="apartment_num" ColumnName="apartment_num" />
+          <ScalarProperty Name="floor_num" ColumnName="floor_num" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="Model.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="id_status" ColumnName="id_status" />
+          <ScalarProperty Name="status_description" ColumnName="status_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Volunteering">
+      <EntityTypeMapping TypeName="Model.Volunteering">
+        <MappingFragment StoreEntitySet="Volunteering">
+          <ScalarProperty Name="id_volunteering" ColumnName="id_volunteering" />
+          <ScalarProperty Name="id_building" ColumnName="id_building" />
+          <ScalarProperty Name="id_resident" ColumnName="id_resident" />
+          <ScalarProperty Name="volunteering_description" ColumnName="volunteering_description" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="done" ColumnName="done" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Professonal">
+      <EntityTypeMapping TypeName="Model.Professonal">
+        <MappingFragment StoreEntitySet="Professonal">
+          <ScalarProperty Name="id_professonal" ColumnName="id_professonal" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="tz" ColumnName="tz" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id_building" ColumnName="id_building" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="hour_cost" ColumnName="hour_cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

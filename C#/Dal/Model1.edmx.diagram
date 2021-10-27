@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="09044db636eb4285a1ece569f092edce" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Action" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Action_Category" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Building" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Comment" Width="1.5" PointX="10.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Common_Space" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.experience" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Meeting" Width="1.5" PointX="3" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Meeting_vote" Width="1.5" PointX="5.25" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="10.25" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Professonal" Width="1.5" PointX="5.25" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Professonal_Category" Width="1.5" PointX="3" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Request" Width="1.5" PointX="8" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Status" Width="1.5" PointX="5.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Tenant" Width="1.5" PointX="8" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TenantManager_Messeage" Width="1.5" PointX="13.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Volunteer" Width="1.5" PointX="10.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Volunteering" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Volunteering_Category" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Vote" Width="1.5" PointX="7.5" PointY="23" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Action_Action_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_budget_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_budget_Tenant" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Action_Category_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Tenant__id_build__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Comment_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Common_Space_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Meeting_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Meeting_vote_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Professonal_category_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Resident_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TenantManager_messeage_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteering_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Vote_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Comment_Meeting" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Comment_Resident" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Meeting_vote_Meeting" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Vote_Meeting" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Vote_Meeting_vote" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Payment_Resident" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Professonal_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Request_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Resident_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TenantManager_messeage_Tenant" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteer_Tenant" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteer_Tenant1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteer_Tenant2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteers_Volunteering" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteering_Volunteering_category" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

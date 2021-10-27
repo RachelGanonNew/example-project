@@ -1,0 +1,135 @@
+C:\draft\finel\Project\Dto\bin\Debug\Dto.dll
+C:\draft\finel\Project\Dto\bin\Debug\Dto.pdb
+C:\draft\finel\Project\Dto\bin\Debug\Dal.dll
+C:\draft\finel\Project\Dto\bin\Debug\Dal.pdb
+C:\draft\finel\Project\Dto\obj\Debug\Dto.csprojAssemblyReference.cache
+C:\draft\finel\Project\Dto\obj\Debug\Dto.csproj.CoreCompileInputs.cache
+C:\draft\finel\Project\Dto\obj\Debug\Dto.csproj.CopyComplete
+C:\draft\finel\Project\Dto\obj\Debug\Dto.dll
+C:\draft\finel\Project\Dto\obj\Debug\Dto.pdb
+C:\draft\finel\Project\Dto\bin\Debug\Dto.dll.config
+C:\draft\finel\Project\Dto\bin\Debug\EntityFramework.dll
+C:\draft\finel\Project\Dto\bin\Debug\EntityFramework.SqlServer.dll
+C:\draft\finel\Project\Dto\bin\Debug\Dal.dll.config
+C:\draft\finel\Project\Dto\bin\Debug\EntityFramework.xml
+C:\draft\finel\Project\Dto\bin\Debug\EntityFramework.SqlServer.xml
+C:\draft\finel\c#\Project\Dto\bin\Debug\Dto.dll.config
+C:\draft\finel\c#\Project\Dto\bin\Debug\Dto.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\Dto.pdb
+C:\draft\finel\c#\Project\Dto\bin\Debug\Dal.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\EntityFramework.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\EntityFramework.SqlServer.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\Dal.pdb
+C:\draft\finel\c#\Project\Dto\bin\Debug\Dal.dll.config
+C:\draft\finel\c#\Project\Dto\bin\Debug\EntityFramework.xml
+C:\draft\finel\c#\Project\Dto\bin\Debug\EntityFramework.SqlServer.xml
+C:\draft\finel\c#\Project\Dto\obj\Debug\Dto.csprojAssemblyReference.cache
+C:\draft\finel\c#\Project\Dto\obj\Debug\Dto.csproj.CoreCompileInputs.cache
+C:\draft\finel\c#\Project\Dto\obj\Debug\Dto.csproj.CopyComplete
+C:\draft\finel\c#\Project\Dto\obj\Debug\Dto.dll
+C:\draft\finel\c#\Project\Dto\obj\Debug\Dto.pdb
+C:\draft\finel\c#\Project\Dto\bin\Debug\Newtonsoft.Json.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\System.Net.Http.Formatting.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\System.Web.Cors.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\System.Web.Http.Cors.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\System.Web.Http.dll
+C:\draft\finel\c#\Project\Dto\bin\Debug\Newtonsoft.Json.xml
+C:\draft\finel\c#\Project\Dto\bin\Debug\System.Net.Http.Formatting.xml
+C:\draft\finel\c#\Project\Dto\bin\Debug\System.Web.Http.xml
+C:\draft\finel\c#\Project\Dto\bin\Debug\System.Web.Http.Cors.xml
+D:\יהודית\פרויקט עדי\Project\Dto\obj\Debug\Dto.csprojAssemblyReference.cache
+D:\יהודית\פרויקט עדי\Project\Dto\obj\Debug\Dto.csproj.CoreCompileInputs.cache
+D:\יהודית\פרויקט עדי\Project\Dto\obj\Debug\Dto.dll
+D:\יהודית\פרויקט עדי\Project\Dto\obj\Debug\Dto.pdb
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Dto.dll.config
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Dto.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Dto.pdb
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Dal.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\EntityFramework.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\EntityFramework.SqlServer.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Newtonsoft.Json.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\System.Net.Http.Formatting.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\System.Web.Cors.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\System.Web.Http.Cors.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\System.Web.Http.dll
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Dal.pdb
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Dal.dll.config
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\EntityFramework.xml
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\EntityFramework.SqlServer.xml
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\Newtonsoft.Json.xml
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\System.Net.Http.Formatting.xml
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\System.Web.Http.xml
+D:\יהודית\פרויקט עדי\Project\Dto\bin\Debug\System.Web.Http.Cors.xml
+D:\יהודית\פרויקט עדי\Project\Dto\obj\Debug\Dto.csproj.CopyComplete
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\obj\Debug\Dto.csprojAssemblyReference.cache
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\obj\Debug\Dto.csproj.CoreCompileInputs.cache
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\obj\Debug\Dto.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\obj\Debug\Dto.pdb
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Dto.dll.config
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Dto.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Dto.pdb
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Dal.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\EntityFramework.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Newtonsoft.Json.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\System.Web.Cors.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\System.Web.Http.Cors.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\System.Web.Http.dll
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Dal.pdb
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Dal.dll.config
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\EntityFramework.xml
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\Newtonsoft.Json.xml
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\System.Web.Http.xml
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\bin\Debug\System.Web.Http.Cors.xml
+C:\Users\CBTemp\Downloads\Project (1)\Project\Dto\obj\Debug\Dto.csproj.CopyComplete
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Dto.dll.config
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Dto.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Dto.pdb
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Dal.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\EntityFramework.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\EntityFramework.SqlServer.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Newtonsoft.Json.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\System.Net.Http.Formatting.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\System.Web.Cors.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\System.Web.Http.Cors.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\System.Web.Http.dll
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Dal.pdb
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Dal.dll.config
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\EntityFramework.xml
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\EntityFramework.SqlServer.xml
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\Newtonsoft.Json.xml
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\System.Net.Http.Formatting.xml
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\System.Web.Http.xml
+C:\draft\final_last\Final1\Project\Dto\bin\Debug\System.Web.Http.Cors.xml
+C:\draft\final_last\Final1\Project\Dto\obj\Debug\Dto.csprojAssemblyReference.cache
+C:\draft\final_last\Final1\Project\Dto\obj\Debug\Dto.csproj.CoreCompileInputs.cache
+C:\draft\final_last\Final1\Project\Dto\obj\Debug\Dto.csproj.CopyComplete
+C:\draft\final_last\Final1\Project\Dto\obj\Debug\Dto.dll
+C:\draft\final_last\Final1\Project\Dto\obj\Debug\Dto.pdb
+C:\draft\git\Building_Managment\C#\Dto\obj\Debug\Dto.csprojAssemblyReference.cache
+C:\draft\git\Building_Managment\C#\Dto\obj\Debug\Dto.csproj.CoreCompileInputs.cache
+C:\draft\git\Building_Managment\C#\Dto\obj\Debug\Dto.dll
+C:\draft\git\Building_Managment\C#\Dto\obj\Debug\Dto.pdb
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Dto.dll.config
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Dto.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Dto.pdb
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Dal.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\EntityFramework.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\EntityFramework.SqlServer.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Newtonsoft.Json.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\System.Net.Http.Formatting.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\System.Web.Cors.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\System.Web.Http.Cors.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\System.Web.Http.dll
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Dal.pdb
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Dal.dll.config
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\EntityFramework.xml
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\EntityFramework.SqlServer.xml
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\Newtonsoft.Json.xml
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\System.Net.Http.Formatting.xml
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\System.Web.Http.xml
+C:\draft\git\Building_Managment\C#\Dto\bin\Debug\System.Web.Http.Cors.xml
+C:\draft\git\Building_Managment\C#\Dto\obj\Debug\Dto.csproj.CopyComplete

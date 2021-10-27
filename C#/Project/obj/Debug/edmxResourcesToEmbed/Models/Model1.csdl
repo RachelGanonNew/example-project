@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="budget">
+    <Key>
+      <PropertyRef Name="id_action" />
+    </Key>
+    <Property Name="id_action" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kind_of_action" Type="Boolean" />
+    <Property Name="action_desription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="action_date" Type="DateTime" Precision="0" />
+    <Property Name="action_sum" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Building">
+    <Key>
+      <PropertyRef Name="id_building" />
+    </Key>
+    <Property Name="id_building" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="street" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="street_num" Type="Int32" />
+    <Property Name="foors_num" Type="Int32" />
+    <Property Name="apartment_num" Type="Int32" />
+    <Property Name="tenants" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="id_residentManager" Type="Int32" />
+    <Property Name="month_cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cash_box" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="professonal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="valentear_category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Common_Space" Relationship="Self.FK_Common_Space_Building" FromRole="Building" ToRole="Common_Space" />
+    <NavigationProperty Name="Professonal1" Relationship="Self.FK_Professonal_Building" FromRole="Building" ToRole="Professonal" />
+    <NavigationProperty Name="Resident" Relationship="Self.FK_Resident_Building" FromRole="Building" ToRole="Resident" />
+    <NavigationProperty Name="Volunteering" Relationship="Self.FK_Volunteering_Building" FromRole="Building" ToRole="Volunteering" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="id_category" />
+    </Key>
+    <Property Name="id_category" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Professonal" Relationship="Self.FK_Professonal_Category" FromRole="Category" ToRole="Professonal" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="id_comment" />
+    </Key>
+    <Property Name="id_comment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_meeting" Type="Int32" />
+    <Property Name="id_resident" Type="Int32" />
+    <Property Name="comment_description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="comment_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Meeting" Relationship="Self.FK_Comment_Meeting" FromRole="Comment" ToRole="Meeting" />
+    <NavigationProperty Name="Resident" Relationship="Self.FK_Comment_Resident" FromRole="Comment" ToRole="Resident" />
+  </EntityType>
+  <EntityType Name="Common_Space">
+    <Key>
+      <PropertyRef Name="id_common_space" />
+    </Key>
+    <Property Name="id_common_space" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_building" Type="Int32" />
+    <Property Name="activity_days" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="activity_hours" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="schedule" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Building" Relationship="Self.FK_Common_Space_Building" FromRole="Common_Space" ToRole="Building" />
+  </EntityType>
+  <EntityType Name="Meeting">
+    <Key>
+      <PropertyRef Name="id_meeting" />
+    </Key>
+    <Property Name="id_meeting" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="meeting_subject" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="start_date" Type="DateTime" Precision="0" />
+    <Property Name="end_date" Type="DateTime" Precision="0" />
+    <Property Name="meeting_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Comment" Relationship="Self.FK_Comment_Meeting" FromRole="Meeting" ToRole="Comment" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="id_payment" />
+    </Key>
+    <Property Name="id_payment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_resident" Type="Int32" />
+    <Property Name="payment_date" Type="DateTime" Precision="0" />
+    <Property Name="payment_month" Type="DateTime" Precision="0" />
+    <Property Name="done" Type="Boolean" />
+    <NavigationProperty Name="Resident" Relationship="Self.FK_Payment_Resident" FromRole="Payment" ToRole="Resident" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="id_request" />
+    </Key>
+    <Property Name="id_request" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tz" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="street" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="street_num" Type="Int32" />
+    <Property Name="apartment_num" Type="Int32" />
+    <Property Name="floor_num" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="Status1" Relationship="Self.FK_Request_Status" FromRole="Request" ToRole="Status" />
+  </EntityType>
+  <EntityType Name="Resident">
+    <Key>
+      <PropertyRef Name="id_resident" />
+    </Key>
+    <Property Name="id_resident" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tz" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id_building" Type="Int32" />
+    <Property Name="apartment_num" Type="Int32" />
+    <Property Name="floor_num" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="Building" Relationship="Self.FK_Resident_Building" FromRole="Resident" ToRole="Building" />
+    <NavigationProperty Name="Comment" Relationship="Self.FK_Comment_Resident" FromRole="Resident" ToRole="Comment" />
+    <NavigationProperty Name="Payment" Relationship="Self.FK_Payment_Resident" FromRole="Resident" ToRole="Payment" />
+    <NavigationProperty Name="Status1" Relationship="Self.FK_Resident_Status" FromRole="Resident" ToRole="Status" />
+    <NavigationProperty Name="Volunteering" Relationship="Self.FK_Volunteering_Resident" FromRole="Resident" ToRole="Volunteering" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="id_status" />
+    </Key>
+    <Property Name="id_status" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="status_description" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Request" Relationship="Self.FK_Request_Status" FromRole="Status" ToRole="Request" />
+    <NavigationProperty Name="Resident" Relationship="Self.FK_Resident_Status" FromRole="Status" ToRole="Resident" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Volunteering">
+    <Key>
+      <PropertyRef Name="id_volunteering" />
+    </Key>
+    <Property Name="id_volunteering" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_building" Type="Int32" />
+    <Property Name="id_resident" Type="Int32" />
+    <Property Name="volunteering_description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="start_date" Type="DateTime" Precision="0" />
+    <Property Name="end_date" Type="DateTime" Precision="0" />
+    <Property Name="done" Type="Boolean" />
+    <NavigationProperty Name="Building" Relationship="Self.FK_Volunteering_Building" FromRole="Volunteering" ToRole="Building" />
+    <NavigationProperty Name="Resident" Relationship="Self.FK_Volunteering_Resident" FromRole="Volunteering" ToRole="Resident" />
+  </EntityType>
+  <EntityType Name="Professonal">
+    <Key>
+      <PropertyRef Name="id_professonal" />
+    </Key>
+    <Property Name="id_professonal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tz" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id_building" Type="Int32" />
+    <Property Name="category" Type="Int32" />
+    <Property Name="hour_cost" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Building" Relationship="Self.FK_Professonal_Building" FromRole="Professonal" ToRole="Building" />
+    <NavigationProperty Name="Category1" Relationship="Self.FK_Professonal_Category" FromRole="Professonal" ToRole="Category" />
+  </EntityType>
+  <Association Name="FK_Common_Space_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Common_Space" Type="Self.Common_Space" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Common_Space">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professonal_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Professonal" Type="Self.Professonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Professonal">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resident_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Resident" Type="Self.Resident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Resident">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Volunteering_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Volunteering" Type="Self.Volunteering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Volunteering">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professonal_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Professonal" Type="Self.Professonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id_category" />
+      </Principal>
+      <Dependent Role="Professonal">
+        <PropertyRef Name="category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comment_Meeting">
+    <End Role="Meeting" Type="Self.Meeting" Multiplicity="0..1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meeting">
+        <PropertyRef Name="id_meeting" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="id_meeting" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comment_Resident">
+    <End Role="Resident" Type="Self.Resident" Multiplicity="0..1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident">
+        <PropertyRef Name="id_resident" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="id_resident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Resident">
+    <End Role="Resident" Type="Self.Resident" Multiplicity="0..1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident">
+        <PropertyRef Name="id_resident" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="id_resident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Request_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="id_status" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resident_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="Resident" Type="Self.Resident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="id_status" />
+      </Principal>
+      <Dependent Role="Resident">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Volunteering_Resident">
+    <End Role="Resident" Type="Self.Resident" Multiplicity="0..1" />
+    <End Role="Volunteering" Type="Self.Volunteering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident">
+        <PropertyRef Name="id_resident" />
+      </Principal>
+      <Dependent Role="Volunteering">
+        <PropertyRef Name="id_resident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Building_ManangementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="budget" EntityType="Self.budget" />
+    <EntitySet Name="Building" EntityType="Self.Building" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Comment" EntityType="Self.Comment" />
+    <EntitySet Name="Common_Space" EntityType="Self.Common_Space" />
+    <EntitySet Name="Meeting" EntityType="Self.Meeting" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" />
+    <EntitySet Name="Request" EntityType="Self.Request" />
+    <EntitySet Name="Resident" EntityType="Self.Resident" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Volunteering" EntityType="Self.Volunteering" />
+    <EntitySet Name="Professonal" EntityType="Self.Professonal" />
+    <AssociationSet Name="FK_Common_Space_Building" Association="Self.FK_Common_Space_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Common_Space" EntitySet="Common_Space" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professonal_Building" Association="Self.FK_Professonal_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Professonal" EntitySet="Professonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resident_Building" Association="Self.FK_Resident_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Resident" EntitySet="Resident" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Volunteering_Building" Association="Self.FK_Volunteering_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Volunteering" EntitySet="Volunteering" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professonal_Category" Association="Self.FK_Professonal_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Professonal" EntitySet="Professonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_Meeting" Association="Self.FK_Comment_Meeting">
+      <End Role="Meeting" EntitySet="Meeting" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_Resident" Association="Self.FK_Comment_Resident">
+      <End Role="Resident" EntitySet="Resident" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Resident" Association="Self.FK_Payment_Resident">
+      <End Role="Resident" EntitySet="Resident" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_Status" Association="Self.FK_Request_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resident_Status" Association="Self.FK_Resident_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Resident" EntitySet="Resident" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Volunteering_Resident" Association="Self.FK_Volunteering_Resident">
+      <End Role="Resident" EntitySet="Resident" />
+      <End Role="Volunteering" EntitySet="Volunteering" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

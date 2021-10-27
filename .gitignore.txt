@@ -1,0 +1,6 @@
+# ignore files
+*.cache
+*.suo
+*.dll
+*.pdb
+*.eslintcache

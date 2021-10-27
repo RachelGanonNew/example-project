@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9810b4dfa40e48c1a7eda75bf74560c0" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.budget" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Building" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Category" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Comment" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Common_Space" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Meeting" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Request" Width="1.5" PointX="6" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Resident" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Status" Width="1.5" PointX="3.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Volunteering" Width="1.5" PointX="11.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Professonal" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Common_Space_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Professonal_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Resident_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteering_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Professonal_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Comment_Meeting" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Comment_Resident" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Payment_Resident" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Request_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Resident_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Volunteering_Resident" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

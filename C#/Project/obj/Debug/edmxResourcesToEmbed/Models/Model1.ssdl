@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="budget">
+    <Key>
+      <PropertyRef Name="id_action" />
+    </Key>
+    <Property Name="id_action" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kind_of_action" Type="bit" />
+    <Property Name="action_desription" Type="varchar" MaxLength="50" />
+    <Property Name="action_date" Type="date" />
+    <Property Name="action_sum" Type="money" />
+  </EntityType>
+  <EntityType Name="Building">
+    <Key>
+      <PropertyRef Name="id_building" />
+    </Key>
+    <Property Name="id_building" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="street" Type="varchar" MaxLength="20" />
+    <Property Name="street_num" Type="int" />
+    <Property Name="foors_num" Type="int" />
+    <Property Name="apartment_num" Type="int" />
+    <Property Name="tenants" Type="varchar" MaxLength="500" />
+    <Property Name="id_residentManager" Type="int" />
+    <Property Name="month_cost" Type="money" />
+    <Property Name="cash_box" Type="money" />
+    <Property Name="professonal" Type="varchar" MaxLength="100" />
+    <Property Name="valentear_category" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="id_category" />
+    </Key>
+    <Property Name="id_category" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_description" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="id_comment" />
+    </Key>
+    <Property Name="id_comment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_meeting" Type="int" />
+    <Property Name="id_resident" Type="int" />
+    <Property Name="comment_description" Type="varchar" MaxLength="20" />
+    <Property Name="comment_date" Type="date" />
+  </EntityType>
+  <EntityType Name="Common Space">
+    <Key>
+      <PropertyRef Name="id_common_space" />
+    </Key>
+    <Property Name="id_common_space" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_building" Type="int" />
+    <Property Name="activity_days" Type="varchar" MaxLength="20" />
+    <Property Name="activity_hours" Type="varchar" MaxLength="50" />
+    <Property Name="schedule" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Meeting">
+    <Key>
+      <PropertyRef Name="id_meeting" />
+    </Key>
+    <Property Name="id_meeting" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="meeting_subject" Type="varchar" MaxLength="20" />
+    <Property Name="start_date" Type="date" />
+    <Property Name="end_date" Type="date" />
+    <Property Name="meeting_description" Type="text" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="id_payment" />
+    </Key>
+    <Property Name="id_payment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_resident" Type="int" />
+    <Property Name="payment_date" Type="date" />
+    <Property Name="payment_month" Type="date" />
+    <Property Name="done" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Building Manangement.dbo.Professonal' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Professonal">
+    <Key>
+      <PropertyRef Name="id_professonal" />
+    </Key>
+    <Property Name="id_professonal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="10" />
+    <Property Name="last_name" Type="varchar" MaxLength="10" />
+    <Property Name="tz" Type="varchar" MaxLength="9" />
+    <Property Name="phone" Type="varchar" MaxLength="10" />
+    <Property Name="email" Type="varchar" MaxLength="20" />
+    <Property Name="id_building" Type="int" />
+    <Property Name="category" Type="int" />
+    <Property Name="hour_cost" Type="money" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="id_request" />
+    </Key>
+    <Property Name="id_request" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="20" />
+    <Property Name="last_name" Type="varchar" MaxLength="20" />
+    <Property Name="tz" Type="varchar" MaxLength="9" />
+    <Property Name="phone" Type="varchar" MaxLength="10" />
+    <Property Name="email" Type="varchar" MaxLength="20" />
+    <Property Name="city" Type="varchar" MaxLength="20" />
+    <Property Name="street" Type="varchar" MaxLength="20" />
+    <Property Name="street_num" Type="int" />
+    <Property Name="apartment_num" Type="int" />
+    <Property Name="floor_num" Type="int" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="Resident">
+    <Key>
+      <PropertyRef Name="id_resident" />
+    </Key>
+    <Property Name="id_resident" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="20" />
+    <Property Name="last_name" Type="varchar" MaxLength="20" />
+    <Property Name="tz" Type="varchar" MaxLength="9" />
+    <Property Name="phone" Type="varchar" MaxLength="10" />
+    <Property Name="email" Type="varchar" MaxLength="20" />
+    <Property Name="id_building" Type="int" />
+    <Property Name="apartment_num" Type="int" />
+    <Property Name="floor_num" Type="int" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="id_status" />
+    </Key>
+    <Property Name="id_status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status_description" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Volunteering">
+    <Key>
+      <PropertyRef Name="id_volunteering" />
+    </Key>
+    <Property Name="id_volunteering" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_building" Type="int" />
+    <Property Name="id_resident" Type="int" />
+    <Property Name="volunteering_description" Type="varchar" MaxLength="50" />
+    <Property Name="start_date" Type="date" />
+    <Property Name="end_date" Type="date" />
+    <Property Name="done" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Building Manangement.dbo.Vote' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Vote">
+          <Property Name="id_vote" Type="int" />
+          <Property Name="id_meeting" Type="int" />
+          <Property Name="vote_subject" Type="varchar" MaxLength="50" />
+          <Property Name="vote_description" Type="text" />
+          <Property Name="residents_vote" Type="varchar" MaxLength="200" />
+        </EntityType>-->
+  <Association Name="FK_Comment_Meeting">
+    <End Role="Meeting" Type="Self.Meeting" Multiplicity="0..1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meeting">
+        <PropertyRef Name="id_meeting" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="id_meeting" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comment_Resident">
+    <End Role="Resident" Type="Self.Resident" Multiplicity="0..1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident">
+        <PropertyRef Name="id_resident" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="id_resident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Common Space_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Common Space" Type="Self.Common Space" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Common Space">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Resident">
+    <End Role="Resident" Type="Self.Resident" Multiplicity="0..1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident">
+        <PropertyRef Name="id_resident" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="id_resident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professonal_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Professonal" Type="Self.Professonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Professonal">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professonal_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Professonal" Type="Self.Professonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id_category" />
+      </Principal>
+      <Dependent Role="Professonal">
+        <PropertyRef Name="category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Request_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="id_status" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resident_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Resident" Type="Self.Resident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Resident">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resident_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="Resident" Type="Self.Resident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="id_status" />
+      </Principal>
+      <Dependent Role="Resident">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Volunteering_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Volunteering" Type="Self.Volunteering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="id_building" />
+      </Principal>
+      <Dependent Role="Volunteering">
+        <PropertyRef Name="id_building" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Volunteering_Resident">
+    <End Role="Resident" Type="Self.Resident" Multiplicity="0..1" />
+    <End Role="Volunteering" Type="Self.Volunteering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident">
+        <PropertyRef Name="id_resident" />
+      </Principal>
+      <Dependent Role="Volunteering">
+        <PropertyRef Name="id_resident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'Building Manangement.dbo.Vote' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_Vote_Meeting" />-->
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="budget" EntityType="Self.budget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Building" EntityType="Self.Building" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Common Space" EntityType="Self.Common Space" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meeting" EntityType="Self.Meeting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Request" EntityType="Self.Request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resident" EntityType="Self.Resident" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Volunteering" EntityType="Self.Volunteering" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Professonal" EntityType="Self.Professonal" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Professonal].[id_professonal] AS [id_professonal], 
+    [Professonal].[first_name] AS [first_name], 
+    [Professonal].[last_name] AS [last_name], 
+    [Professonal].[tz] AS [tz], 
+    [Professonal].[phone] AS [phone], 
+    [Professonal].[email] AS [email], 
+    [Professonal].[id_building] AS [id_building], 
+    [Professonal].[category] AS [category], 
+    [Professonal].[hour_cost] AS [hour_cost]
+    FROM [dbo].[Professonal] AS [Professonal]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Comment_Meeting" Association="Self.FK_Comment_Meeting">
+      <End Role="Meeting" EntitySet="Meeting" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_Resident" Association="Self.FK_Comment_Resident">
+      <End Role="Resident" EntitySet="Resident" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Common Space_Building" Association="Self.FK_Common Space_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Common Space" EntitySet="Common Space" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Resident" Association="Self.FK_Payment_Resident">
+      <End Role="Resident" EntitySet="Resident" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professonal_Building" Association="Self.FK_Professonal_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Professonal" EntitySet="Professonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professonal_Category" Association="Self.FK_Professonal_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Professonal" EntitySet="Professonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_Status" Association="Self.FK_Request_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resident_Building" Association="Self.FK_Resident_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Resident" EntitySet="Resident" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resident_Status" Association="Self.FK_Resident_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Resident" EntitySet="Resident" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Volunteering_Building" Association="Self.FK_Volunteering_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Volunteering" EntitySet="Volunteering" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Volunteering_Resident" Association="Self.FK_Volunteering_Resident">
+      <End Role="Resident" EntitySet="Resident" />
+      <End Role="Volunteering" EntitySet="Volunteering" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
